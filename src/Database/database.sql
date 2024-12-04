@@ -1,3 +1,12 @@
+-- Crear la tabla Usuario
+CREATE TABLE IF NOT EXISTS Usuario(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    email varchar(100) UNIQUE NOT NULL,
+    contrasenia varchar(100),
+    proveedor varchar(50) NOT NULL
+);
+
 -- Crear la tabla Productos
 CREATE TABLE IF NOT EXISTS Productos (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -27,14 +36,4 @@ CREATE TABLE IF NOT EXISTS Compras_Productos(
     unidad_precio VARCHAR(50) NOT NULL,
     precio FLOAT NOT NULL,
     total_precio FLOAT NOT NULL
-);
-
-
--- Crear la tabla Compras-Productos
-CREATE TABLE IF NOT EXISTS Usuario(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(100) NOT NULL,
-    email varchar(100) UNIQUE NOT NULL,
-    contrasenia varchar(100),
-    proveedor varchar(50) NOT NULL
 );
